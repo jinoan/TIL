@@ -2,7 +2,7 @@
 title: "Facial Keypoints Detection"
 author: "Jinho Ahn"
 date: "2019-04-11"
-output: html_notebook
+output: github_document
 ---
 
 ```{r setup, echo=FALSE, eval=FALSE}
