@@ -1,0 +1,93 @@
+---
+title: "Facial Keypoints Detection"
+author: "Jinho Ahn"
+date: "2019-04-11"
+output: html_notebook
+---
+
+```{r setup, echo=FALSE, eval=FALSE}
+Sys.setlocale('LC_ALL','C')
+```
+<br>
+
+### 데이터 읽어오기
+
+```{r read}
+# 데이터 경로
+data.dir <- './data/'
+train.file <- paste0(data.dir, 'training.csv')
+test.file <- paste0(data.dir, 'test.csv')
+
+# 데이터 읽기 (read.csv)
+d.train <- read.csv(train.file, stringsAsFactors = F)
+```
+<br>
+
+### 데이터 프레임 보기
+```{r show_dataframe}
+# 데이터프레임 보기
+str(d.train)  # 데이터 레코드 수: 7049개, 변수 수: 31개
+```
+<br>
+
+### 데이터 보기
+```{r show_data}
+# 데이터 보기
+im.train <- d.train$Image  # Image 변수 데이터를 im.train에 저장
+d.train$Image <- NULL  # d.train의 Image 열 삭제
+head(d.train)  # 5행의 데이터 레코드 확인
+```
+
+```{r show_img_data, eval=FALSE}
+# 첫번째 이미지 데이터 보기
+im.train[1]
+```
+<br>
+
+### 첫번째 이미지 데이터 벡터 형태로 저장
+```{r vectorize_img_data, eval=FALSE}
+as.integer(unlist(strsplit(im.train[1], " ")))
+# strsplit: 문자열 나누기
+# unlist: 문자열을 벡터에 담기
+# as.integer: 정수형 벡터로 변환
+```
+<br>
+
+### 병렬처리를 위한 doMC 라이브러리
+```{r doMC, eval=FALSE}
+# 위 작업을 반복하기 전에 멀티코어방식을 지원하도록
+# doMC 라이브러리 이용
+install.packages('doMC', repos = "http://R-Forge.R-project.org")
+library(doMC)
+registerDoMC()
+```
+<br>
+
+### 전체 이미지 데이터 벡터 형태로 저장
+```{r vectorize_all_img_data, eval=FALSE}
+im.train <- foreach(im = im.train, .combine = rbind) %dopar% {
+  as.integer(unlist(strsplit(im, " ")))
+}
+```
+
+```{r}
+str(im.train)
+```
+<br>
+
+### test 데이터에 대해서 같은 작업
+```{r}
+d.test <- read.csv(test.file, stringsAsFactors = F)
+im.test <- foreach(im = d.test$Image, .combine = rbind) %dopar% {
+  as.integer(unlist(strsplit(im, " ")))
+}
+d.test$Image <- NULL
+```
+<br>
+
+### 처리된 데이터 저장
+```{r}
+save(d.train, im.train, d.test, im.test, file = 'data.Rd')
+```
+
+
