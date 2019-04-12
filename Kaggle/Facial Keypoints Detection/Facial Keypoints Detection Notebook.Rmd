@@ -70,13 +70,13 @@ im.train <- foreach(im = im.train, .combine = rbind) %dopar% {
 }
 ```
 
-```{r}
+```{r show_im_train}
 str(im.train)
 ```
 <br>
 
 ### test 데이터에 대해서 같은 작업
-```{r}
+```{r tesk_d_test}
 d.test <- read.csv(test.file, stringsAsFactors = F)
 im.test <- foreach(im = d.test$Image, .combine = rbind) %dopar% {
   as.integer(unlist(strsplit(im, " ")))
@@ -86,8 +86,10 @@ d.test$Image <- NULL
 <br>
 
 ### 처리된 데이터 저장
-```{r}
+```{r save}
 save(d.train, im.train, d.test, im.test, file = 'data.Rd')
 ```
+
+
 
 
