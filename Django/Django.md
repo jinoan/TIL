@@ -50,7 +50,7 @@ $ python manage.py startapp pages
         path('index/', views.index),  # index page의 url
         path('admin/', admin.site.urls),  # admin page의 url
     ]
-```
+    ```
     
 2. `./pages/views.py`
 
