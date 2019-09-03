@@ -12,6 +12,7 @@
 - [Kaggle](<https://github.com/winarc24/TIL/tree/master/Kaggle>)
 - [Text_Mining](<https://github.com/winarc24/TIL/tree/master/Text_Mining>)
   - [Preprocessing](<https://github.com/winarc24/TIL/tree/master/Text_Mining/Preprocessing>)
+- AI School
 
 ---
 
@@ -36,3 +37,6 @@
   - [KoNLPy](<https://github.com/winarc24/TIL/blob/master/Text_Mining/Preprocessing/KoNLPy.ipynb>)
   - [NLTK](<https://github.com/winarc24/TIL/blob/master/Text_Mining/Preprocessing/NLTK.ipynb>)
 
+### AI School
+
+> 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.

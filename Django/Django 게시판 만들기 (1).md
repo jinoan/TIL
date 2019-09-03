@@ -1,4 +1,4 @@
-# Django로 게시판 만들기
+# Django로 게시판 만들기 (1)
 
 
 
@@ -373,4 +373,339 @@
    	</form>
    </p>
    ```
+
+
+
+## 게시글 수정 기능
+
+1. `boards/url.py`에 추가
+
+   ```python
+   path('<int:id>/edit/', views.edit),  # 게시글 수정 페이지 렌더링
+   ```
+
+2. `boards/views.py` 에 추가
+
+   ```python
+   # 게시글 수정 페이지 렌더링
+   def edit(request, id):
+       # id 값에 맞는 board 데이터 꺼낸 후 edit.html 로 넘기기
+       board = Board.objects.get(id=id)
+       context = {'board': board}
+       return render(request, 'boards/edit.html', context)
+   ```
+
+3. `boards/templates/boards/edit.html` 생성 ( `new.html` 과 비슷하게 )
+
+   ```html
+   {% extends 'boards/base.html' %}
+   
+   {% block body %}
+       <h1>EDIT</h1>
+       <form action="/boards/{{board.id}}/update/" method="post">
+           {% csrf_token %}  <!-- csrf 토큰을 함께 보낸다 -->
+           <label for="title">Title</label><br />
+           <input id="title" type="text" name="title"
+                  value="{{board.title}}"><br />
+           <label for="content">Content</label><br />
+           <textarea name="content" id="content">
+               {{board.content}}
+           </textarea><br />
+           <input type="submit">
+       </form>
+       <a href="/boards/">돌아가기</a>
+   {% endblock %}
+   ```
+
+4. `boards/urls.py` 에 update를 처리할 url 추가
+
+   ```python
+   path('<int:id>/update/', views.update)  # 사용자가 입력한 수정 데이터를 전송받고 실제 DB 에 수정 후 저장
+   ```
+
+5. `boards/views.py` 에 update 처리 메소드 작성
+
+   ```python
+   def update(request, id):
+       title = request.POST.get('title')
+       content = request.POST.get('content')
+       # id 값에 맞는 board 데이터를 위에서 주어진 title 과 content에 맞게
+       # 수정한 뒤 저장하는로직
+       # 1. Board 클래스를 통해 id 값에 맞는 데이터를 가져온다.
+       board = Board.objects.get(id=id)
+   
+       # 2. 해당 데이터의 내용을 주어진 title, content 로 수정한다.
+       board.title = title
+       board.content = content
+   
+       # 3. 저장한다.
+       board.save()
+   
+       return redirect(f'/boards/{id}/')
+   ```
+
+6. `boards/templates/boards/detail.html` 에 edit.html 연결 링크 추가
+
+   ```html
+   <p>
+       <a href="/boards/{{board.id}}/edit">EDIT</a>
+   </p>
+   ```
+
+
+
+## URL에 name을 명시하여 사후관리 용이하게 하기
+
+1. `boards/urls.py` 수정
+
+   ```python
+   app_name = 'boards'  # boards app 임을 명시
+   
+   urlpatterns = [
+       path('', views.index, name='index'),
+       path('new/', views.new, name='new'),
+       path('create/', views.create, name='create'),
+       path('<int:id>/', views.detail, name='detail'),
+       path('<int:id>/delete/', views.delete, name='delete'),
+       path('<int:id>/edit/', views.edit, name='edit'),
+       path('<int:id>/update/', views.update, name='update'),
+   ]
+   ```
+
+2. `boards/views.py` 수정 (redirect 부분을 바꿔준다.)
+
+   ```python
+   from django.shortcuts import render, redirect
+   from .models import Board
+   
+   
+   # Create your views here.
+   def index(request):
+       # Board 의 전체 데이터를 불러온다 - QuerySet
+       boards = Board.objects.all()
+       context = {'boards': boards}
+       return render(request, 'boards/index.html', context)
+   
+   
+   # 사용자 입력을 받는 페이지 렌터링
+   def new(request):
+       return render(request, 'boards/new.html')
+   
+   
+   # 데이터를 받아서 실제 DB 에 작성
+   def create(request):
+       title = request.POST.get('title')
+       content = request.POST.get('content')
+       board = Board(title=title, content=content)
+       board.save()
+       print('new board id: ', board.id)
+       return redirect('boards:detail', board.id)
+   
+   
+   # 특정 게시글 하나만 가지고 온다.
+   def detail(request, id):
+       # Board 클래스를 사용해서 id 값에 맞는 데이터를 가지고 온다.
+       # context 로 넘겨서 detail.html 페이지에서 title 과 content 를 출력해본다.
+       board = Board.objects.get(id=id)
+       context = {'board': board}
+       return render(request, 'boards/detail.html', context)
+   
+   
+   # 특정 게시글 삭제
+   def delete(request, id):
+       board = Board.objects.get(id=id)
+       board.delete()
+       return redirect('boards:index')
+   
+   
+   # 게시글 수정 페이지 렌더링
+   def edit(request, id):
+       # id 값에 맞는 board 데이터 꺼낸 후 edit.html 로 넘기기
+       board = Board.objects.get(id=id)
+       context = {'board': board}
+       return render(request, 'boards/edit.html', context)
+   
+   
+   def update(request, id):
+       title = request.POST.get('title')
+       content = request.POST.get('content')
+       # id 값에 맞는 board 데이터를 위에서 주어진 title 과 content에 맞게
+       # 수정한 뒤 저장하는로직
+       # 1. Board 클래스를 통해 id 값에 맞는 데이터를 가져온다.
+       board = Board.objects.get(id=id)
+   
+       # 2. 해당 데이터의 내용을 주어진 title, content 로 수정한다.
+       board.title = title
+       board.content = content
+   
+       # 3. 저장한다.
+       board.save()
+   
+       return redirect('boards:detail', id)
+   ```
+
+3. html 코드에서도 url 수정 (아래는 index.html 예시. 다른 html 파일도 수정해야함)
+
+   ```html
+   {% extends 'boards/base.html' %}  <!-- base.html 을 상속받음 -->
+   
+   {% block body %}  <!-- /base.html 안의 block body 부분에 내용이 들어간다. -->
+       <h1>Welcome to boards</h1>
+       <hr />
+       {% for board in boards %}
+           {{ board.id }} | <a href="{% url 'boards:detail' board.id %}">{{ board.title }}</a>
+           <hr />
+       {% endfor %}
+       <a href="{% url 'boards:new' %}">새로운 글 작성</a>
+   {% endblock %}
+   ```
+
+
+
+## admin 페이지 생성
+
+1. 관리자 계정 생성
+
+   ```bash
+   $ python manage.py createsuperuser
+   ```
+
+2. `boards/admin.py` 수정
+
+   ```python
+   from django.contrib import admin
+   from .models import Board
+   
+   # Register your models here.
+   admin.site.register(Board)
+   ```
+
+3. `boards/models.py` 의 Board class 안에 다음 코드 추가
+
+   ```python
+   def __str__(self):
+       # 형식 예: 1. 첫번째 포스트
+       return f'{self.id}. {self.title}'
+   ```
+
+
+
+## Restful하게 코드 변경
+
+- Request 방법의 종류
+
+  ```
+  GET			/boards/<id>/
+  POST		/boards/<id>/
+  PUT(PATCH)	/boards/<id>/
+  DELETE		/boards/<id>/
+  ```
+
+- Django에서는 GET과 POST 두 가지 방법만 제공한다.
+
+  ```
+  GET			/boards/<id>/
+  POST		/boards/<id>/
+  POST		/boards/<id>/edit
+  POST		/boards/<id>/delete
+  ```
+
+- `boards/views.py` new 메소드 부분 수정
+
+  ```python
+  def new(request):
+      # GET
+      if request.method == 'GET':
+          return render(request, 'boards/new.html')
+      # POST
+      else:
+          title = request.POST.get('title')
+          content = request.POST.get('content')
+          board = Board(title=title, content=content)
+          board.save()
+          print('new board id: ', board.id)
+          return redirect('boards:detail', board.id)
+  ```
+
+- `boards/templates/boards/new.html` 페이지에서 `/boards/new/` 으로 post 방식으로 요청하도록 수정
+
+  ```html
+  <form action="{% url 'boards:new' %}" method="post">
+  ```
+
+- 필요없어진 create.html과 url, view 함수 제거
+
+- 같은 방식으로 edit view 수정하기
+
+  `boards/views.py`
+
+  ```python
+  def edit(request, id):
+      board = Board.objects.get(id=id)  # DRY (Don't Repeat Yourself)
+      # GET
+      if request.method == 'GET':
+          context = {'board': board}
+          return render(request, 'boards/edit.html', context)
+      # POST
+      else:
+          title = request.POST.get('title')
+          content = request.POST.get('content')
+          board.title = title
+          board.content = content
+          board.save()
+          return redirect('boards:detail', id)
+  ```
+
+  `boards/templates/boards/edit.html`
+
+  ```html
+  <form action="{% url 'boards:edit' board.id %}" method="post">
+  ```
+
+  `boards/urls.py`
+
+  ```python
+  urlpatterns = [
+      path('', views.index, name='index'),
+      path('new/', views.new, name='new'),
+      path('<int:id>/', views.detail, name='detail'),
+      path('<int:id>/delete/', views.delete, name='delete'),
+      path('<int:id>/edit/', views.edit, name='edit'),
+  ]
+  ```
+
+- url에 직접 요청하는 방법 (GET 방식) 으로 게시글을 삭제하지 못하도록 수정
+
+  `boards/views.py`
+
+  ```python
+  from django.views.decorators.http import require_http_methods
+  
+  # 특정 게시글 삭제
+  @require_http_methods(['POST'])  # 허용할 request 방식을 리스트에 담음.
+  def delete(request, id):         # GET 요청을 받으면 status 405 error code 를 전달
+      board = Board.objects.get(id=id)
+      board.delete()
+      return redirect('boards:index')
+  ```
+
+- 다른 함수에도 @require_http_methods로 접근방법을 한정시킨다.
+
+
+
+## 존재하지 않는 페이지 접근 시 404 error 전달하기
+
+- `boards/views.py` 에서 get_object_or_404 메서드 추가
+
+  ```python
+  from django.shortcuts import render, redirect, get_object_or_404
+  ```
+
+- `boards/views.py` 에서
+
+  `board = Board.objects.get(id=id)` 코드를 모두 찾아 다음과 같이 수정
+
+  ```python
+  board = get_object_or_404(Board, id=id)
+  ```
 
