@@ -42,4 +42,5 @@
 > 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.
 
 - [DAY 1](https://github.com/winarc24/TIL/blob/master/AI_School/DAY%201.md)
+- [DAY 2](https://github.com/winarc24/TIL/blob/master/AI_School/DAY%202.md)
 
