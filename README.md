@@ -6,17 +6,29 @@
 
 ## Category
 
+- [AI School](<https://github.com/winarc24/TIL/tree/master/AI_School>)
 - [Django](<https://github.com/winarc24/TIL/blob/master/Django>)
 - [Git](<https://github.com/winarc24/TIL/tree/master/Git>)
-- [NLP](<https://github.com/winarc24/TIL/tree/master/Text_Mining>)
-  - [tokenizing](<https://github.com/winarc24/TIL/tree/master/Text_Mining/Preprocessing>)
-- [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
+- [Markdown](<https://github.com/winarc24/TIL/tree/master/Markdown>)
+- [NLP](<https://github.com/winarc24/TIL/tree/master/NLP>)
+  - [tokenizing](<https://github.com/winarc24/TIL/tree/master/NLP/Tokenizing>)
+- [Scrapy](<https://github.com/winarc24/TIL/tree/master/Scrapy>)
 
 
 
 ## Contents
 
-### Django
+### [AI School](<https://github.com/winarc24/TIL/tree/master/AI_School>)
+
+> 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.
+
+- [DAY 1](<https://github.com/winarc24/TIL/blob/master/AI_School/DAY_1.md>)
+- [DAY 2](<https://github.com/winarc24/TIL/blob/master/AI_School/DAY_2.md>)
+- [DAY 3](<https://github.com/winarc24/TIL/blob/master/AI_School/DAY_3.md>)
+
+
+
+### [Django](<https://github.com/winarc24/TIL/blob/master/Django>)
 
 - [Django](<https://github.com/winarc24/TIL/blob/master/Django/Django.md>)
 - [Django + DB](<https://github.com/winarc24/TIL/blob/master/Django/Django %2B DB.md>)
@@ -24,26 +36,26 @@
 
 
 
-### Git
+### [Git](<https://github.com/winarc24/TIL/tree/master/Git>)
 
 - [Git-basic](<https://github.com/winarc24/TIL/blob/master/Git/Git-basic.md>)
 
 
 
-### NLP
+### [Markdown](<https://github.com/winarc24/TIL/tree/master/Markdown>)
 
-- ##### tokenizing
-
-  - [KoNLPy](<https://github.com/winarc24/TIL/blob/master/Text_Mining/Preprocessing/KoNLPy.ipynb>)
-  - [NLTK](<https://github.com/winarc24/TIL/blob/master/Text_Mining/Preprocessing/NLTK.ipynb>)
+- [Markdown-basic](<https://github.com/winarc24/TIL/blob/master/Markdown/Markdown-basic.md>)
 
 
 
-### AI School
+### [NLP](<https://github.com/winarc24/TIL/tree/master/NLP>)
 
-> 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.
+- ##### [tokenizing](<https://github.com/winarc24/TIL/tree/master/NLP/Tokenizing>)
 
-- [DAY 1](https://github.com/winarc24/TIL/blob/master/AI_School/DAY%201.md)
-- [DAY 2](https://github.com/winarc24/TIL/blob/master/AI_School/DAY%202.md)
-- [DAY 3](https://github.com/winarc24/TIL/blob/master/AI_School/DAY%203.md)
+  - [KoNLPy](<https://github.com/winarc24/TIL/blob/master/NLP/Tokenizing/KoNLPy.ipynb>)
+  - [NLTK](<https://github.com/winarc24/TIL/blob/master/NLP/Tokenizing/NLTK.ipynb>)
+
+
+
+### [Scrapy](<https://github.com/winarc24/TIL/tree/master/Scrapy>)
 
