@@ -31,8 +31,12 @@
 ### [Django](https://github.com/winarc24/TIL/blob/master/Django)
 
 - [Django](https://github.com/winarc24/TIL/blob/master/Django/Django.md)
-- [Django + DB](https://github.com/winarc24/TIL/blob/master/Django/Django %2B DB.md)
-- [Django 게시판 만들기](https://github.com/winarc24/TIL/blob/master/Django/Django 게시판 만들기.md)
+- [Django + DB](https://github.com/winarc24/TIL/blob/master/Django/Django%20%2B%20DB.md)
+- [Django DB에 json 데이터 넣기](https://github.com/winarc24/TIL/blob/master/Django/Django%20DB에%20json%20데이터%20넣기.md)
+- [Django 게시판 만들기(1)](https://github.com/winarc24/TIL/blob/master/Django/Django%20게시판%20만들기%20(1).md)
+- [Django 게시판 만들기(2)](https://github.com/winarc24/TIL/blob/master/Django/Django%20게시판%20만들기%20(2).md)
+- [Django 게시판 만들기(3)](https://github.com/winarc24/TIL/blob/master/Django/Django%20게시판%20만들기%20(3).md)
+- [Django 카카오 계정 연동](https://github.com/winarc24/TIL/blob/master/Django/Django%20카카오%20계정%20연동.md)
 
 
 
