@@ -9,6 +9,7 @@
 - [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
 - [Django](https://github.com/winarc24/TIL/blob/master/Django)
 - [Git](https://github.com/winarc24/TIL/tree/master/Git)
+- [Linux](https://github.com/winarc24/TIL/tree/master/Linux)
 - [Markdown](https://github.com/winarc24/TIL/tree/master/Markdown)
 - [NLP](https://github.com/winarc24/TIL/tree/master/NLP)
   - [tokenizing](https://github.com/winarc24/TIL/tree/master/NLP/Tokenizing)
@@ -43,6 +44,12 @@
 ### [Git](https://github.com/winarc24/TIL/tree/master/Git)
 
 - [Git-basic](https://github.com/winarc24/TIL/blob/master/Git/Git-basic.md)
+
+
+
+### [Linux](https://github.com/winarc24/TIL/tree/master/Linux)
+
+- [리눅스 기본 명령어](https://github.com/winarc24/TIL/blob/master/Linux/리눅스 기본 명령어.md)
 
 
 
