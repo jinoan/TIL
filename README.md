@@ -49,7 +49,7 @@
 
 ### [Linux](https://github.com/winarc24/TIL/tree/master/Linux)
 
-- [리눅스 기본 명령어](https://github.com/winarc24/TIL/blob/master/Linux/리눅스 기본 명령어.md)
+- [리눅스 기본 명령어](https://github.com/winarc24/TIL/blob/master/Linux/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 
 
