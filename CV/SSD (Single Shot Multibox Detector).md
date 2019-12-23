@@ -17,16 +17,16 @@
 
 ### 구조
 
-<figure align="center">
+<p align="center">
         <img src="https://miro.medium.com/max/974/1*51joMGlhxvftTxGtA4lA7Q.png" alt="" />
-        <figcaption>SSD architecture</figcaption>
-</figure>
+SSD architecture
+</p>
 
 VGG-16 구조에서 fully connected layers 대신  보조 CNN이 추가된 형태로 다중 척도로 features를 뽑아내고 input size가 각 레이어를 지나면서 점차적으로 줄어듦
 
-<figure align="center">
+<p align="center">
     <img src="https://miro.medium.com/max/470/1*3-TqqkRQ4rWLOMX-gvkYwA.png" alt="" />
-    <figcaption>VGG architecture</figcaption>
-</figure>
+VGG architecture
+</p>
 
 
