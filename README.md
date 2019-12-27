@@ -8,22 +8,18 @@
 
 - [AI School](#ai_school)
 
-- [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
-- [Django](https://github.com/winarc24/TIL/blob/master/Django)
-- [Git](https://github.com/winarc24/TIL/tree/master/Git)
-- [Linux](https://github.com/winarc24/TIL/tree/master/Linux)
-- [Markdown](https://github.com/winarc24/TIL/tree/master/Markdown)
-- [NLP](https://github.com/winarc24/TIL/tree/master/NLP)
-  - [tokenizing](https://github.com/winarc24/TIL/tree/master/NLP/Tokenizing)
-- [Scrapy](https://github.com/winarc24/TIL/tree/master/Scrapy)
+- [Django](#django)
+- [Git](#git)
+- [Linux](#linux)
+- [Markdown](#markdown)
+- [NLP](#nlp)
+- [Scrapy](#scrapy)
 
 
 
 ## Contents
 
 ### <a id="ai_school" href="https://github.com/winarc24/TIL/tree/master/AI_School">AI School</a>
-
-### [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
 
 > 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.
 
@@ -33,7 +29,7 @@
 
 
 
-### [Django](https://github.com/winarc24/TIL/blob/master/Django)
+### <a id="django" href="https://github.com/winarc24/TIL/blob/master/Django">Django</a>
 
 - [Django](https://github.com/winarc24/TIL/blob/master/Django/Django.md)
 - [Django + DB](https://github.com/winarc24/TIL/blob/master/Django/Django%20%2B%20DB.md)
@@ -45,26 +41,27 @@
 
 
 
-### [Git](https://github.com/winarc24/TIL/tree/master/Git)
+### <a id="git" href="https://github.com/winarc24/TIL/tree/master/Git">Git</a>
 
 - [Git-basic](https://github.com/winarc24/TIL/blob/master/Git/Git-basic.md)
+- [Github markdown 수식 관련](https://github.com/winarc24/TIL/blob/master/Git/Github%20markdown%20%EC%88%98%EC%8B%9D%20%EA%B4%80%EB%A0%A8.md)
 
 
 
-### [Linux](https://github.com/winarc24/TIL/tree/master/Linux)
+### <a id="linux" href="https://github.com/winarc24/TIL/tree/master/Linux">Linux</a>
 
 - [리눅스 기본 명령어](https://github.com/winarc24/TIL/blob/master/Linux/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 - [vim 설치 및 사용법](https://github.com/winarc24/TIL/blob/master/Linux/vim%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 
 
-### [Markdown](https://github.com/winarc24/TIL/tree/master/Markdown)
+### <a id="markdown" href="https://github.com/winarc24/TIL/tree/master/Markdown">Markdown</a>
 
 - [Markdown-basic](https://github.com/winarc24/TIL/blob/master/Markdown/Markdown-basic.md)
 
 
 
-### [NLP](https://github.com/winarc24/TIL/tree/master/NLP)
+### <a id="nlp" href="https://github.com/winarc24/TIL/tree/master/NLP">NLP</a>
 
 - ##### [tokenizing](https://github.com/winarc24/TIL/tree/master/NLP/Tokenizing)
 
@@ -73,5 +70,7 @@
 
 
 
-### [Scrapy](https://github.com/winarc24/TIL/tree/master/Scrapy)
+### <a id="scrapy" href="https://github.com/winarc24/TIL/tree/master/Scrapy">Scrapy</a>
+
+
 
