@@ -6,7 +6,7 @@
 
 ## Category
 
-- <a id="ai_school" href="https://github.com/winarc24/TIL/tree/master/AI_School">AI School</a>
+- [AI School](#ai_school)
 
 - [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
 - [Django](https://github.com/winarc24/TIL/blob/master/Django)
@@ -21,7 +21,9 @@
 
 ## Contents
 
-### [](#ai_school)[AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
+### <a id="ai_school" href="https://github.com/winarc24/TIL/tree/master/AI_School">AI School</a>
+
+### [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
 
 > 양재R&CD혁신허브 2019 AI School 2기 강의 내용을 정리한 자료입니다.
 
