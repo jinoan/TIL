@@ -6,9 +6,7 @@
 
 ## Category
 
-- [AI School](#ai_school)
-
-
+- <a id="ai_school" href="https://github.com/winarc24/TIL/tree/master/AI_School">AI School</a>
 
 - [AI School](https://github.com/winarc24/TIL/tree/master/AI_School)
 - [Django](https://github.com/winarc24/TIL/blob/master/Django)
