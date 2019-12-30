@@ -211,6 +211,7 @@ $ source ~./bashrc
 
 `:set number`: 행번호 출력 (`:set nu`)
 
-`set nonumber`: 행번호 숨김 (`:set nonu`)
+`:set nonumber`: 행번호 숨김 (`:set nonu`)
 
 `:cd`: 현재 디렉토리 출력
+
