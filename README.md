@@ -7,12 +7,12 @@
 ## Category
 
 - [AI School](#ai_school)
-
 - [Django](#django)
 - [Git](#git)
 - [Linux](#linux)
 - [Markdown](#markdown)
 - [NLP](#nlp)
+- [Python](#python)
 - [Scrapy](#scrapy)
 
 
@@ -67,6 +67,14 @@
 
   - [KoNLPy](https://github.com/winarc24/TIL/blob/master/NLP/Tokenizing/KoNLPy.ipynb)
   - [NLTK](https://github.com/winarc24/TIL/blob/master/NLP/Tokenizing/NLTK.ipynb)
+
+
+
+### <a id="python" href="https://github.com/winarc24/TIL/tree/master/Python">Python</a>
+
+- [Python-basic](https://github.com/winarc24/TIL/blob/master/Python/Python-basic.md)
+- [Anaconda 기본 명령어](https://github.com/winarc24/TIL/blob/master/Python/Anaconda%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
+- [Anaconda3로 Caffe 설치](https://github.com/winarc24/TIL/blob/master/Python/Anaconda3%EB%A1%9C%20Caffe%20%EC%84%A4%EC%B9%98.md)
 
 
 
