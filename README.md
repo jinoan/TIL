@@ -52,6 +52,7 @@
 
 - [리눅스 기본 명령어](https://github.com/winarc24/TIL/blob/master/Linux/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EA%B8%B0%EB%B3%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 - [vim 설치 및 사용법](https://github.com/winarc24/TIL/blob/master/Linux/vim%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
+- [리눅스 서버간 파일 복사 (scp)](https://github.com/winarc24/TIL/blob/master/Linux/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%84%9C%EB%B2%84%EA%B0%84%20%ED%8C%8C%EC%9D%BC%20%EB%B3%B5%EC%82%AC%20(scp).md)
 
 
 
