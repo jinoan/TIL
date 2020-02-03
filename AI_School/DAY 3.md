@@ -169,7 +169,7 @@ http://playground.tensorflow.org
 
 #### Step size(learning rate)
 
-- 한번 학습할 떄 해가 이동하는 거리에 대한 비율
+- 한번 학습할 때 해가 이동하는 거리에 대한 비율
 - 시간에 따라 이동거리 줄임
 - 이동할 때마다 목적함수를 최소화
 
