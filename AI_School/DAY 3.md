@@ -178,12 +178,16 @@ http://playground.tensorflow.org
 #### Optimization
 
 - Local minimum에 빠지지 않고 global minimum에 도달할 수 있도록 gradient descent algorithm을 선택하고 learning rate를 조절해야 한다.
+
 - gradient descent algorithm의 종류
   - SGD
-  - Mumentum
-  - AdaGrad
+  - Momentum
+  - Adagrad
   - Adam
   - ...
+  
+  ![](assets/d03_04.png 'https://ganghee-lee.tistory.com/24')
+  
 - 좋은 learning rate는 예측 오류가 점점 줄어드는 형태를 보인다.
 
 ![d03_04](assets/d03_04.jpeg 'http://aikorea.org/cs231n/assets/nn3/learningrates.jpeg')
