@@ -2,7 +2,7 @@
 
 - [Tech-Interview](https://kjsu0209.github.io/Tech-Interview/)
 
-- [기술면접 질문 정리 - CS지식](https://velog.io/@matisse/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8-%EC%A0%95%EB%A6%AC-CS) (python 
+- [기술면접 질문 정리 - CS지식](https://velog.io/@matisse/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B8-%EC%A0%95%EB%A6%AC-CS) (python 관련)
 
 ### ML/DL
 
